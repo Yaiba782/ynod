@@ -16,6 +16,8 @@ import { AuthGuard } from './_guards/index';
 import { AuthenticationService, UserService } from './_services/index';
 import { LoginComponent } from './login/index';
 import { HomeComponent } from './home/index';
+import { getBalance } from './getBalance/index';
+
 
 @NgModule({
     imports: [
@@ -27,7 +29,8 @@ import { HomeComponent } from './home/index';
     declarations: [
         AppComponent,
         LoginComponent,
-        HomeComponent
+        HomeComponent,
+        getBalance
     ],
     providers: [
         AuthGuard,  
