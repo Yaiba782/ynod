@@ -3,8 +3,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule }    from '@angular/forms';
 import { HttpModule } from '@angular/http';
  
-import { MockBackend, MockConnection } from '@angular/http/testing';
+
+import { BackendProvider } from './_services/backend'; 
 import { BaseRequestOptions } from '@angular/http';
+
+import { MockBackend, MockConnection } from '@angular/http/testing';
 
 import { AppComponent }  from './app.component';
 import { routing }        from './app.routing';
@@ -27,9 +30,12 @@ import { HomeComponent } from './home/index';
         HomeComponent
     ],
     providers: [
-        AuthGuard,
+        AuthGuard,  
         AuthenticationService,
-        UserService
+        UserService,
+        BackendProvider,
+        MockBackend,
+        BaseRequestOptions
     ],
     bootstrap: [AppComponent]
 })
