@@ -1,10 +1,15 @@
-﻿<div class="col-md-6 col-md-offset-3">
-    <h1>Accueil</h1>
-    <p>Vous êtes sur la page de vérification de compte.</p>
+﻿<div class="col-md-10 col-md-offset-1">
+    <p><a [routerLink]="['/']">Accueil</a></p>
+    <h1>Mon compte</h1>
+    <p>Solde :</p>
     <div>
         <ul>
-            <li >{{user.firstName}} {{user.lastName}}</li>
-            <h2> {{user.balance}}</h2>
+            <li *ngFor="let user of users">{{user.firstName}} {{user.lastName}}</li>
+            <li *ngFor="let user of users"> {{user.balance}} €</li>
         </ul>
+
+        <p><a [routerLink]="['/credit']">Contracter un crédit</a></p>
+
+
     </div>
 </div>
