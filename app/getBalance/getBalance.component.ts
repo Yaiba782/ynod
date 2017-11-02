@@ -9,8 +9,8 @@ import { UserService } from '../_services/index';
 
 export class getBalance implements OnInit {
 
-    constructor() {return true;}
+    constructor() {}
     ngOnInit(){
-        return true;
+        return getBalance;
     }
 }
