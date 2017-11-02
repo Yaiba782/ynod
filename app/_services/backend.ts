@@ -3,7 +3,7 @@ import { MockBackend, MockConnection } from '@angular/http/testing';
 
 export function backendFactory(backend: MockBackend, options: BaseRequestOptions) { 
     backend.connections.subscribe((connection: MockConnection) => {
-        let testUser = { username: 'test', password: 'test', firstName: 'Nom', lastName: 'Prenom' }; 
+        let testUser = { username: 'test', password: 'test', firstName: 'Nom', lastName: 'Prenom' , balance: 0};
         setTimeout(() => { 
             if (connection.request.url.endsWith('/api/authenticate') && connection.request.method === RequestMethod.Post) { 
                 let params = JSON.parse(connection.request.getBody()); 

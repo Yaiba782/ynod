@@ -17,6 +17,7 @@ import { AuthenticationService, UserService } from './_services/index';
 import { LoginComponent } from './login/index';
 import { HomeComponent } from './home/index';
 import { getBalance } from './getBalance/index';
+import { credit } from './credit/index';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { getBalance } from './getBalance/index';
         AppComponent,
         LoginComponent,
         HomeComponent,
-        getBalance
+        getBalance,
+        credit
     ],
     providers: [
         AuthGuard,  
